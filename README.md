@@ -1,24 +1,33 @@
-# README
+# Comandos úteis rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rodando projeto:
 
-Things you may want to cover:
+```ruby
+bin/rails server
+```
 
-* Ruby version
+# Gerando controller por linha de comando
 
-* System dependencies
+```ruby
+bin/rails generate controller Articles index --skip-routes
+```
 
-* Configuration
+> skip routes ignora a criação de rotas, tendo que criar na mão posteriormente
 
-* Database creation
+# Gerando model com atributos
 
-* Database initialization
+```ruby
+bin/rails generate model Article title:string body:text
+```
 
-* How to run the test suite
+# Rodando migrations
 
-* Services (job queues, cache servers, search engines, etc.)
+```ruby
+bin/rails db:migrate
+```
 
-* Deployment instructions
+# Abrir console do DB
 
-* ...
+```ruby
+bin/rails console
+```
