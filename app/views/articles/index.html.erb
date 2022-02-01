@@ -4,6 +4,10 @@
   <% @articles.each do |article| %>
     <li>
       <%= link_to article.title, article %>
+      <%= link_to "Destroy", article_path(article), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      } %>
     </li>
   <% end %>
 </ul>
